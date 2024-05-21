@@ -1,0 +1,95 @@
+* {
+    margin : 0px;
+    padding : 0px;
+    box-sizing: border-box;
+}
+h1 ,h2{
+    text-align: center;
+    color: rgb(23, 61, 184);
+    font: 50px bold;
+     
+
+}
+
+h3{
+   text-align: center;
+    font-size: 15px ;
+color: rgb(255, 0, 13);
+
+;
+}
+
+
+   p {
+    font-size: 20px;
+    color : rgb(255, 0, 34);
+padding: 5px 100px;
+border : 3px solid;
+margin: 40px auto;
+}
+a, a:visited {
+    color: #2d0548;
+    text-decoration: none;
+}
+
+
+a:hover {
+    background-color: rgb(255, 0, 0);
+   color : black
+
+}
+
+
+
+.menu {
+  
+    text-align:  center  ; 
+    background-color: rgb(42, 165, 69);
+    height: 70px;
+    padding: 5px 10px; 
+
+}
+/* bu kendi kendine etkiliyor a tagli */
+ .menu a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    
+}
+.resaltado{
+    
+   padding: 10px;
+    border: 50px solid;
+
+}
+ /* alttaki kod imagenes icin  tek tek resaltado olmasi icin ve yazmadan etkiliyor*/
+ 
+ 
+
+ 
+}
+/* alttaki kod dive uygulandi ve resimler icin de yukaridaki kod uygulandi.Ustune geldigimizde one cikmasi icin */
+.resaltado:hover{
+    background-color: rgb(167, 150, 214);
+    border: 10px #8d1e68 solid;
+}
+
+
+
+
+  ul:hover{
+    list-style-type: none;
+    margin: 40px;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(20, 139, 155) ;
+    color : black;
+    text-align: center;
+    padding: 10px;
+    height: 80px;
+ border: 8px #050648 solid;
+text-align: center;
+
+
+
+}

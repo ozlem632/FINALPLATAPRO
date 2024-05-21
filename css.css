@@ -1,0 +1,703 @@
+
+*{
+	margin:0px;
+	padding:0px;
+	list-style: none;
+	text-decoration: none;
+	font-family: sans-serif;
+	box-sizing: border-box; }
+	h2{font-size: 20px; color:rgb(68, 0, 255);margin-top: 15px;}
+	.div1{display:flex;justify-content: space-between;} 		
+    .div2{display: flex;justify-content: space-between;margin-top: 30px;margin-right: 20px;}
+/* anillo.html */
+     dialog{width:50%;height:60%;border-radius: 10px ;border: solid 5px red;margin: 0 auto;position: absolute;margin-top: 110px;}
+    dialog button{justify-content: center;margin-top: 200px;margin-left: 200px;}
+    #articulos {
+         display: flex;justify-content: center;
+         flex-wrap: wrap;
+         gap: 20px;
+         width: auto;
+        }
+		/* urun anadir carrito diologu */
+		dialog #ozellikler{font-size: 20px;color:red;width: 200px;height: 100px;justify-content: center;}
+
+	
+		.toplam{background-color:red ;color: white;font-size: 15px;padding: 0 20px; margin-left: auto;margin-right: 10px;width:100px ;margin-top: 15px;margin-bottom: 15px;}
+		.toplam p{margin-top: 15px;text-align: center;}
+		.cer{display: flex;justify-content: center;}
+		.cer button{margin-left: 3px;background-color: #00a2ff;}
+	 #carritoVentana ul{display: flex; flex-direction: column;}
+	 #carritoVentana ul li {display: flex;justify-content: space-evenly;}
+    #articulos img{border: solid 1px white;
+ display: flex;justify-content: center;width: 200px;}
+    
+     .ficha {
+         border: 1px solid #319624;
+         padding: 10px;
+         width: 250px;
+         height: 400px;
+         position: relative;
+         
+         
+     }
+    .ficha p{font-size: 20px;color: rgb(13, 0, 255); text-align: center;}
+     #imagenMarco {
+         display: flex;margin: 0 auto;
+		width: 300px;
+         height:200px ;
+
+        
+     }
+     .ficha button{
+         display: flex;
+         position:absolute;
+         bottom: 15px;
+         border-radius: 15px; border: solid 3px purple; background-color:purple; font-size: 15px; color: aliceblue;width: 45%; height: 65px; padding: 10px;}
+     #anadir{position: absolute; right: 10px; background-color: #51c741;border: solid 3px  #51c741;}
+     #imagenMarco img  {
+           width: 100%; 
+           height: 100%;
+         object-fit: contain;
+		 border-radius: 50%;border: solid 3px blue ;width: 200px;height:200px;display: flex;justify-content: space-between
+     }
+	 #imagenMar img  {
+		width: 100%; 
+		height: 100%;
+	  object-fit: contain;
+	  border-radius: 50%;border: solid 3px blue ;width: 200px;height:200px;display: flex;justify-content: space-between;
+	  margin-top: 100px;width: 300px;height: 300px;
+  }
+
+  
+
+
+	 /* carrito */
+#iconoCarrito {
+	position:relative;
+	width: 40px;
+	height: 40px;
+ bottom: 0px;
+	}
+	#articuloImagen{display: flex;justify-content: center;}
+  
+  #numProductos {
+	position: absolute;
+	text-align: center;
+	color: red;
+	
+	
+  }
+	/* yeniindex */
+	.imagenyeni img{border-radius: 50%;width: 300px; height: 300px; border: solid 5px #0011ff;}
+	.imagenyeni{display: flex;justify-content:center ;flex-wrap: wrap;margin: 0 auto;cursor: pointer;}
+ .imagenyeni p{ display: flex;  font-size: 30px;text-align: center;color: #1fdf2f;margin-left: 25px;}
+
+ 
+  /* .c{display: flex;justify-content: space-between;margin-left: 15px;cursor: pointer;font-weight: bold;} */
+/* .c:hover{padding: 20px;background-color: rgb(248, 35, 134);} */
+
+.navbar{display: flex; justify-content: space-between; background-color: #140909;}
+.navbar img{width: 40px; height: 40px;}
+     
+
+ul {
+		display: flex;
+		list-style: none;
+		padding: 0;cursor: pointer;font-weight: bold;
+
+	 
+	}ul li {
+		
+		display: block;
+		justify-content: center;
+		position: relative;
+		margin-bottom: 35px;
+		}
+
+	 li{margin-left: 15px;}
+	
+	
+		.catagoria{display: flex;margin-top: 30px ;}
+	.catagoria img{width: 50px; height: 50px;}
+	.catagoria h4{ margin-top: 15px; color: #1fdf2f; font-size: 20px;}
+	
+
+	
+	 ul li ul {
+		display: none;
+		position: relative;
+		top: 100%;
+		left: 0;
+		background: #fff;
+		border: 1px solid #ccc;
+		z-index: 2;
+	}
+	.whatsup{display: block; position: fixed;}
+	
+	H3{font-size: 16px;color: rgb(17, 228, 27); font-family: Arial, Helvetica, sans-serif;font-style: italic;margin-top: 10px;}
+	 ul li:hover ul {
+		display: block;
+		background-color:rgb(226, 216, 216);
+		font-size: 20px;
+		color: purple;
+		background-color:black;
+		
+		text-align: center;
+		}
+		/* buttonanillos */
+		/* Ver Detalle ve Comprar butonları için genel stil */
+button[data-action="detail"],
+button[data-action="buy"] {
+    padding: 20px 20px;  /* Buton boyutu */
+    margin: 5px;         /* Butonlar arası boşluk */
+    border: none;        /* Kenarlık yok */
+    cursor: pointer; 
+	   /* Mouse üzerine gelindiğinde el işareti */
+}
+/* kalp seklinde border */
+.heart {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	background-color: red;
+	border-radius: 50%;
+	transform: rotate(45deg);
+  }
+  
+  .heart::before,
+  .heart::after {
+	content: '';
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	background-color: red;
+	border-radius: 50%;
+  }
+  
+  .heart::before {
+	top: -50px;
+	left: 0;
+  }
+  
+  .heart::after {
+	top: 0;
+	left: 50px;
+  }
+  
+/* Ver Detalle butonunun stilini ayarlama */
+button[data-action="detail"] {
+    background-color: #c2df1f;  /* Mavi arka plan rengi */
+    color: white;
+	padding: 50px 50px; 
+	font-size: 20px;
+	text-align: center;
+	
+	          /* Beyaz yazı rengi */
+}
+/* sepete ekleme sayma */
+.cart-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+#cart-icon {
+    width: 50px; /* Sepet resminin genişliği */
+}
+/* Comprar butonunun stilini ayarlama */
+button[data-action="buy"] {
+    background-color: #f54bd9;  /* Yeşil arka plan rengi */
+    color: white;
+	padding: 50px 50px; 
+	font-size: 20px;
+	text-align: center;               /* Beyaz yazı rengi */
+}
+
+  h5{font-size: 30px;color: blue;cursor: pointer;text-align: center;}
+
+h1 {
+    font-family: "Whisper", cursive;
+    font-weight: 400;
+    font-style: normal;
+	color: rgb(58, 245, 34);
+	font-size: 40px;
+	text-align: center;
+	font-weight: bolder;
+	
+  }
+  .div3{display: flex;; background-color: black;width: 100%;}
+  .divchild{display: flex; margin-top: 30px;}
+   img{background-size: contain;}
+ /* pendientes */
+ 
+ .display{display: flex;justify-content: space-between;gap: 4px; width:100%;}
+.border{border: solid 2px black;margin-left: 3px;}
+#devam{display: none;}
+ dialog button{ margin-top: 20px;  width: 100px; height: 50px; background-color: rgb(0, 255, 13);font-size: 20px;color: rgb(26, 4, 4); text-align: center;justify-content: flex}
+
+
+
+body {
+	font-family: Ariafl, sans-serif;
+}
+
+
+
+
+
+
+/* Index html nin css kodlari */
+ /* Resmin üstüne gelecek transparan katmanın stilini belirleyelim */
+ .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(228, 213, 213, 0.5); /* Siyah renk ve %50 opaklıkta bir arka plan oluşturur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin-top: 75px;
+position: fixed;
+    
+  }
+
+  /* Metnin stili */
+  .text {
+    color: purple ;
+    font-size: 24px;
+    text-align: center;
+    display: fixed;
+  }
+
+
+  /* Resim container'ının pozisyonunu belirleyelim */
+  .container {
+    position: relative;
+    width: 100%;
+     /* Örneğin 600 piksel genişlikte bir container belirleyelim */
+  margin-top: 100px;
+	}
+.search{display: flex;}
+.search img{margin-top: 30px;width: 50px; height: 50px;}
+  .display{display: flex;justify-content: space-between;}
+  .intro{border-radius: 20px; width: 300px;height: 50px;margin-top: 30px;padding: 20px;font-size: 30px;}
+  #palabras::placeholder {
+	color:black; /* Yer tutucu metnin rengi */
+	font-style: italic; /* Yer tutucu metnin stili (italik gibi) */
+	opacity: 0.5;
+	
+	font-size: 20px; /* Yer tutucu metnin opaklığı */
+	/* Diğer stil özellikleri buraya eklenebilir */
+  }
+
+  
+/* registrar */
+
+   /* Estilos para la ventana modal */
+   .modal {
+	display: none; 
+	position: fixed; 
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7); 
+	z-index: 1000; 
+}
+
+.modal-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #ffffff;
+	padding: 20px;
+	border-radius: 20px; /* Bordes redondeados */
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	width: 90%; /* Ancho del 90% */
+	max-width: 500px; /* Ancho máximo */
+}
+
+.close-btn {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	cursor: pointer;
+	font-size: 24px;
+}
+
+/* Estilo para el botón */
+#openModalBtn {
+	padding: 10px 20px;
+	background-color: #007BFF;
+	color: #ffffff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+/* Estilo para el botón de registro */
+#registerForm button {
+	padding:1px;
+	background-color: red; /* Cambio de color a rojo */
+	color: #ffffff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	;
+}
+/* catalog menusu */
+.menu { 
+    position: relative;
+    display: inline-block;
+}
+
+.menu-trigger {
+    cursor: pointer;
+	margin-top:10px ;
+	
+
+    
+}
+
+#submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    background-color: #a0c538;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	border-radius: 15px;
+	border: solid 4px rgb(211, 233, 12);
+	width: 200px;
+	height: 200px;
+}
+ul{display: flex;}
+
+.submenu  {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+	width: 200px;
+}
+
+
+
+
+.submenu :hover {
+    background-color: #ec8e6c;
+	cursor: pointer;
+}
+.submenu p{display: flex;flex-direction: column;margin: 10px;font-size: 20px;color: #190eb6; }
+
+
+
+/* Estilo para los campos del formulario */
+.form-input {
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+/* anillos */
+h1,h2,h3 {
+    text-align: center;
+}
+/* contactonun codlari */
+#contactFormModal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5); /* Arkaplanı karartmak için yarı saydam bir siyah renk */
+	z-index: 9999; /* Diğer elementlerin üstünde olması için yüksek bir z-index değeri */
+	display: none; /* Başlangıçta gizli tutuyoruz */
+}
+
+#modalContent {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+}
+/* anillos */
+
+#container {
+	background-color:antiquewhite;
+	padding: 5px;
+	width: 700px;
+/* 	margin-right: auto;
+	margin-left: auto; */
+    margin: 0 auto;
+    height: 600px;
+    display: flex;
+    ;flex-direction: column;
+	margin-top: 50px;
+}
+.rojo {
+	color: #F00;
+	font-size: 18px;
+}
+
+.botonera {
+    background-color: green;
+    color : white;
+    font-weight: bolder;
+}
+.circulo {
+    border-radius : 50%;
+    border : 1px solid black;
+    width :20px;
+    height: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.barra {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.circuloActivo {
+    visibility: visible;
+    background-color: blueviolet;
+    color : white;
+    border: 2px solid  red;
+  
+
+}
+.padrecatagoria{display: flex;
+    }
+
+.divtexto{display: flex;flex-direction: column;}
+.circuloOculto {
+    visibility:hidden;
+}
+.bayrak {
+    border-radius: 50%; /* Yuvarlak köşeler için */
+    width: 40px; /* Ölçüleri istediğiniz gibi ayarlayabilirsiniz */
+    height: 40px;
+	margin-top: 2px;
+	background-size: contain;
+
+     /* Resmin yuvarlak alan içine sığmasını sağlar */
+
+}
+
+
+/* index sayfasinin resmi */
+
+
+.content { /* section */
+    width: 100%;
+	background-color:rgba(255,255,255,1.00);}
+
+
+
+	
+  
+/* h4{font-family: 'Honk', system-ui;
+	font-size: 40px;
+	 text-align: center;
+	}
+ */
+
+.padrefooter { background-color: black;width: 100%;height: 500px;margin-top: 200px;}
+.footer{display: flex;flex-direction:column;justify-content: center;  cursor: pointer;font-weight: bold;text-align: center;margin-top: 200px;}
+
+
+	#fotoTitulo{
+    text-align: center;
+    font-size: 20px
+}
+button{width: 150px}
+
+
+
+
+@media(max-width:2000px){
+
+	.col-lg-12{width:100%;}
+	.col-lg-11{width:91.66666667%;}
+	.col-lg-10{width:83.33333333%;}
+	.col-lg-9{width:75%;}
+	.col-lg-8{width:66.66666667%;}
+	.col-lg-7{width:58.33333333%;}
+	.col-lg-6{width:50%;}
+	.col-lg-5{width:41.66666667%;}
+	.col-lg-4{width: 33.33333333%;}
+	.col-lg-3{width: 25%;}
+	.col-lg-2{width: 16.66666667%;}
+	.col-lg-1{width: 8.33333333%;}
+	.col-lg-0{display:none;}
+	
+.imagenpagina h3{font-size: 30px;position: relative;   margin-bottom: 15px;}
+.imagenpagina{display: flex;justify-content:center ;flex-wrap: wrap;}
+.imagenpagina img{border-radius: 50%;border:solid 5px #007BFF;width: 300px; height: 300px;}
+	}
+	
+
+/*=============================================PANTALLA DE
+ESCRITORIO MEDIANO - MEDIUM (md) - revisamos en tablet horizontal
+1024px
+=============================================*/
+@media screen and (max-width:1199px) and (min-width:992px){
+
+	.col-md-12{width:100%;}
+	.col-md-11{width:91.66666667%;}
+	.col-md-10{width:83.33333333%;}
+	.col-md-9{width:75%;}
+	.col-md-8{width:66.66666667%;}
+	.col-md-7{width:58.33333333%;}
+	.col-md-6{width:50%;}
+	.col-md-5{width:41.66666667%;}
+	.col-md-4{width: 33.33333333%;}
+	.col-md-3{width: 25%;}
+	.col-md-2{width: 16.66666667%;}
+	.col-md-1{width: 8.33333333%;}
+	.col-md-0{display:none;}
+	
+
+	
+	 
+
+
+}
+/* indek html */
+/*=============================================
+PANTALLA DE TABLET - SMALL (sm) - revisamos en tablet vertical
+768px=============================================*/
+@media(max-width:991px){
+	.col-sm-12{width:100%;}
+	.cod-sm-11{width:91.66666667%;}
+	.col-sm-10{width:83.33333333%;}
+	.col-sm-9{width:75%;}
+	.col-sm-8{width:66.66666667%;}
+	.col-sm-7{width:58.33333333%;}
+	.col-sm-6{width:50%;}
+	.col-sm-5{width:41.66666667%;}
+	.col-sm-4{width: 33.33333333%;}
+	.col-sm-3{width: 25%;}
+	.col-sm-2{width: 16.66666667%;}
+	.col-sm-1{width: 8.33333333%;}
+	.col-sm-0{display:none;}
+	.display{display: inline-flex;}
+	
+	
+		  
+		
+		  
+	
+}
+/*=============================================PANTALLA DE PHONES -
+EXTRA SMALL (xs) - revisamos en movil horizontal 480px o vertical
+320px=============================================*/
+@media(max-width:767px) {
+	.col-xs-12{width:100%;}
+	.cod-xs-11{width:91.66666667%;}
+	.col-xs-10{width:83.33333333%;}
+	.col-xs-9{width:75%;}
+	.col-xs-8{width:66.66666667%;}
+	.col-xs-7{width:58.33333333%;}
+	.col-xs-6{width:50%;}
+	.col-xs-5{width:41.66666667%;}
+	.col-xs-4{width: 33.33333333%;}
+	.col-xs-3{width: 25%;}
+	.col-xs-2{width: 16.66666667%;}
+	.col-xs-1{width: 8.33333333%;}
+	.col-xs-0{display:none;}
+	
+	}
+	@media only screen and (max-width: 600px) {
+		.navbar {
+		  flex-direction: column;
+		  align-items: center;
+		}
+	  
+		.navbar .divchild {
+		  margin-bottom: 20px;
+		}
+	  
+		.navbar .search {
+		  margin-bottom: 20px;
+		}
+	  
+		.navbar .div2 {
+		  display: flex;
+		  justify-content: space-evenly;
+		  align-items: center;
+		  width: 100%;
+		  
+		}
+	  
+		.navbar .div2 ul {
+		  display: flex;justify-content: center;
+		  list-style: none;
+		  padding: 0;
+		  margin: 0;
+
+		}
+		.list-group{display: flex;flex-direction: column;}
+		#carritoventana{display: flex; flex-direction: column;background-color: #319624;}
+		
+		
+		.navbar .div2 ul li  {
+		  margin: 0 5px;
+		  
+		  }
+	  .bien{font-size: 30px;color: #5207a8;}
+	  .intro{font-size: 18px;color: #f702a5;}
+	  h5{text-align: center;}
+	  .padrefooter{display: flex;flex-direction: column;justify-content: space-evenly;}
+	#articulos{display: flex;justify-content: center;}
+	dialog{width:100%;  margin-top: 20px; }
+	dialog button{width: 50px;}
+	h5{justify-content: center;}
+	#iconoCarrito {
+		position:relative;
+		width: 40px;
+		height: 40px;
+	 bottom: 0px;
+		}
+		
+	  
+	  #numProductos {
+		position: absolute;
+		text-align: center;
+		color: red;
+		
+		
+	  }
+	
+	  .menu { 
+		display: inline-block;
+	}
+	.imagenyeni p{ display: flex;  font-size: 30px;text-align: center;color: #1fdf2f;margin-left: 55px;}
+	
+	}

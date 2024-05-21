@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PENDIENTES</title>
+<link rel="stylesheet" href="css.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Honk:SHLN@100&family=Whisper&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+  
+    
+    
+    <!-- Carrito -->
+<dialog id="carritoVentana">
+    <h2>Carrito</h2>
+    <!-- Elementos del carrito -->
+    <ul id="carrito" class="list-group"></ul>
+    <hr>
+    <!-- Precio total -->
+  
+    
+    <div class="cer">
+        <div><button id="boton-vaciar" class="btn btn-danger">Vaciar</button></div>
+        <div><button id="boton-cerrar" class="btn btn-danger">Cerrar X</button></div>
+    
+        <div class="toplam"> <p class="text-right">Total: <span id="total"></span>&euro;</p></div>
+       
+    </div>
+    </div>
+   
+</dialog>
+
+<!-- JavaScript -->
+<script>
+    const carritoVentana = document.getElementById('carritoVentana');
+    const botonCerrar = document.getElementById('boton-cerrar');
+    
+
+    window.addEventListener('click', (event) => {
+        if (event.target === carritoVentana || event.target === botonCerrar) {
+            carritoVentana.close();
+        }
+    });
+</script>
+
+
+<header id="header">
+</header>
+
+
+<script src="productos.js"></script>
+
+<script src="carritoDePendientes.js"></script>
+
+
+
+<div class="navbar">
+    <div class="divchild">
+    <img src="IMG/tulips.png" width="50px" height="50px" >
+    <h1>Platapro</h1></div>
+  <div class="padrecatagoria">
+    <div class="catagoria">
+      <img src="IMG/icons8-hamburger-100.png">
+    
+     <!--  <ul> -->
+        <!-- <li> --> <!-- <div> <h2>CATALOG</h2></div>  -->
+             <div class="menu">
+              <div class="menu-trigger" id="hamburger"><h4>CATEGORÍAS</h4></div>
+      
+        <div class="submenu" id="submenu">
+            <a href="anillornek.html" target="_blank">ANILLOS</a>
+            <a href="pulserasornek.html"target="_blank" >PULSERAS</a>
+            <a href="collaresornek.html" target="_blank">COLLARES</a>
+            <a href="ornekpendientes.html" target="_blank">PENDIENTES</a>
+        </div>
+  
+
+    <script src="scripts.js"></script>
+      
+<!--       <ul>
+      <li><a href="anillornek.html">ANILLOS</a></li>
+      <li><a href="pulserasornek.html">PULSERAS</a></li>
+      <li><a href="collaresornek.html">COLLARES</a></li>
+      <li><a href="ornekpendientes.html">PENDIENTES</a></li>
+     </ul>
+    </li>
+    </ul> </div>
+
+</div> -->
+</div>
+</div>
+</div>
+
+
+<div class="search">
+    <input id="palabras" type="text" class="intro"
+      placeholder="Busca....."   >
+      <img src="IMG/search.png" id="imgsearc"  onclick="arama();" >
+   
+     </div>
+
+
+<div class="div2">
+<ul>
+    <li><img src="IMG/ispanya bayragi.webp" class="bayrak" alt= "resim1"></li>
+    <li><img src="IMG/heart.png" width="40px" id="cesta"></li>
+    
+    
+    <li><img src="IMG/shopping-cart.png" width="40px" id="iconoCarrito"  onclick="verCarrito();"><span id="numProductos" class="cart-icon"></span> </li>
+    <li id="iniciar"><h3>INICIAR</h3></li>
+    <li id="registrar"><h3>REGISTRAR</h3></li>
+  </ul>
+  </div>
+   </div>
+ 
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h4>Registro</h4>
+        <form id="registerForm">
+            <input type="text" class="form-input" placeholder="Nombre de usuario" required>
+            <input type="email" class="form-input" placeholder="Correo electrónico" required>
+            <input type="password" class="form-input" placeholder="Contraseña" required>
+            <button type="submit">Registrarse</button>
+        </form>
+        
+      </div>
+</div>
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+      <span class="close-btn" id="closeLoginModal">&times;</span>
+      <h4>Iniciar Sesión</h4>
+      <form id="loginForm">
+          <input type="email" class="form-input" placeholder="Correo electrónico" required>
+          <input type="password" class="form-input" placeholder="Contraseña" required>
+          <button type="submit">Iniciar Sesión</button>
+      </form>
+  </div>
+</div>
+</div>
+</div>  
+
+
+<script>
+  // JavaScript para controlar la ventana modal
+  const openModalBtn = document.getElementById('registrar');
+  const closeModal = document.getElementById('closeModal');
+  const registerModal = document.getElementById('registerModal');
+
+  openModalBtn.addEventListener('click', () => {
+      registerModal.style.display = 'block';
+      
+  });
+
+  closeModal.addEventListener('click', () => {
+      registerModal.style.display = 'none';
+  });
+
+  // Cierra la ventana modal si el usuario hace clic fuera de ella
+  window.addEventListener('click', (event) => {
+      if (event.target === registerModal) {
+          registerModal.style.display = 'none';
+          
+      }
+  });
+
+  // Evitar que el formulario se envíe
+  const registerForma = document.getElementById('registerForm');
+  registerForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      // Aquí puedes agregar la lógica para registrar al usuario
+      alert('Usuario registrado correctamente');
+      registerModal.style.display = 'none';
+  });
+</script>
+<script>
+    // JavaScript para controlar la ventana modal de inicio de sesión
+    const openLoginModal = document.getElementById('iniciar');
+    const closeLoginModal = document.getElementById('closeLoginModal');
+    const loginModal = document.getElementById('loginModal');
+
+    openLoginModal.addEventListener('click', () => {
+        loginModal.style.display = 'block';
+    });
+
+    closeLoginModal.addEventListener('click', () => {
+        loginModal.style.display = 'none';
+    });
+
+    // Cierra la ventana modal si el usuario hace clic fuera de ella
+    window.addEventListener('click', (event) => {
+        if (event.target === loginModal) {
+            loginModal.style.display = 'none';
+        }
+    });
+
+    // Evitar que el formulario se envíe
+    const loginForm = document.getElementById('loginForm');
+    loginForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        alert('Usuario inició sesión correctamente');
+        loginModal.style.display = 'none';
+    });
+</script>
+<a href="index.html" target="_blank"><h1 style="display: flex;justify-content: flex-start; color: red;">HOME</h1></a>
+   
+   
+<h1>PENDIENTES</h1>
+
+
+<section id="articulos">
+    <!--
+    <div class="ficha">
+        <p>Nombre</p>
+        <div id="imagenMarco">
+            <img src="modal/img/imagen1.jpg" alt="Producto">
+        </div>
+        <button onclick="verModal('nombre','imagen_url')">Abrir ventana modal</button>
+    </div>
+    -->
+</section>
+
+<dialog id="modalArticulo" class="dialogo">
+   <h2 id="modalH2">Pendientes</h2>
+   <p>descripcion</p>
+   <div id="imagenMarco">
+        <img id="articuloImagen" src="modal/img/imagen1.jpg" >
+    </div>
+   <button onclick="window.modalArticulo.close();">Cerrar</button> 
+</dialog>
+<script src="productos.js"></script>
+<script>
+    // recorro el objeto flores
+    let textoArticulos = '';
+    for (items of cartPendientes) {
+        textoArticulos += `
+            <div class="ficha">
+                <p>${items.marka}</p>
+
+                <div id="imagenMarco">
+                    <img src="${items.img_url}" alt="Producto">
+                </div>
+                
+                <button onclick="verModal('${items.marka}','${items.img_url}')">VER DETALLE</button>
+                <button id="anadir" onclick="anyadirProductoAlCarrito(${items.id})">AÑADIR CARRITO</button>
+
+                </div>`;
+    }
+    document.getElementById('articulos').innerHTML = textoArticulos;
+
+    function verModal(marka, img_url) {
+        console.log(document.querySelector('#modalH2'));
+        console.log(marka);
+        console.log(img_url);
+        document.querySelector('#modalH2').innerHTML = marka;
+        document.querySelector('#articuloImagen').src = img_url;
+       
+       
+        modalArticulo.showModal();
+    }
+</script>
+
+
+<script src="script.js"></script>
+
+<div class="padrefooter">
+    <div>
+    
+        <a href="https://form.jotform.com/241333033984353"  target="_blank"><h5>CONTACTO</h5></a>
+     </div>
+ 
+     <div class="footer">
+      <div>
+       <a href="https://www.instagram.com/platapro2024/?igsh=cGNkbGF1ZnJ3MXYx" target="_blank"><img src="IMG/instagram.png"width="50px" ></a>
+      <img src="IMG/etsy.png"width="50px" >
+      <img src="IMG/facebook.png"width="50px">
+      <img src="IMG/gmail.png"width="50px" >
+   </div>
+ <div style="font-size: 20px; color: white;text-align: center;margin: 40px;"><p> &copy; 2024 Platapro|All Rights Reserved</p>
+     </div>
+   </div>
+   
+   
+
+</body>
+</html>

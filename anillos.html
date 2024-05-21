@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>ANILLOS</title>
+<link rel="stylesheet" href="css.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Honk:SHLN@100&family=Whisper&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+ <div style="background-color: black;width: 100%;height: 100px;">
+        <div class="col-lg-11 col-md-9 col-sm-10 col-xs-12 div1">
+          <div class="divchild">
+          <div><img src="IMG/tulips.png" width="50px"  class="img"></div>
+          <div><h1>Platapro</h1></div>
+          <div  style="display: flex; margin-left: 30px;margin-top: 15px;">
+          <div style="margin-top: 10px;"><img src="IMG/icons8-hamburger-100.png" width="40px"></div>
+          
+            <ul>
+             
+              
+           <li><h2><a href="catalog.html"></a>CATALOG</h2>
+            <div>
+            <ul>
+            <li><a href="anillos.html">ANILLOS</a></li>
+            <li><a href="pulseras.html">PULSERAS</a></li>
+            <li><a href="pendientes.html">COLLARES</a></li>
+            <li><a href="pendientes.html">PENDIENTES</a></li>
+           </ul>
+         
+           
+          </li>
+          </ul>
+        </div>
+      
+      </div>
+      
+      <div class="col-lg-3 col-md-3w col-sm-6 col-xs-12 div2">
+        
+       <div class="c"><h3>COMPRAR</h3></div>
+        <div class="c"><img src="IMG/heart.png" width="40px"></div>
+        <div class="c"><img src="IMG/shopping-cart.png" width="40px"></div>
+        <div class="c"><h3>INICIAR</h3></div>
+        <div class="c"><h3>REGISTRAR</h3></div>
+      </div>
+      </div>  
+<div></div>
+<div id="container">
+
+ <h1>ANILLOS</h1>
+    <h2>VARIEDADES</h2>
+    <p>LES DESEAMOS LO MEJOR</p>
+    <div id="botonera">
+        <div class="barra">
+            <button id="btn-diapositiva"  class="botonera">EMPEZAR</button>
+            
+            <table id="tablaId">
+        
+            </table>
+        </div>
+
+
+    </div>
+
+
+    <br>
+    <div id="galeria" style="height: 400px;margin-left: auto;margin-right: auto;">
+<div class="divtexto">
+    <div><img id="foto" width="100%"> </div>
+    <div class="divtexto"> <h3 id="fotoTitulo"></h3> </div>
+    </div>
+    
+
+</div>
+<script>
+    // Inicializacion de valores
+    let botones = '';
+    let diapo;
+    //const galeria = ['foto01.jpg', 'foto02.jpg', 'foto03.jpg', 'foto04.jpg'];
+    const galeria = ['./YUZUK1.jpeg','./YUZUK2.jpeg','./YUZUK3.jpeg','./YUZUK4.jpeg','./YUZUK5.jpeg','./YUZUK6.jpeg','./YUZUK7.jpeg','./YUZUK8.jpeg'];
+    const galeriaTexto = ['<ul><li>Titulo:anillo plata ley</li><li>precio:10E</li><li>color:grey</li></ul>', 'Titulo:anillo plata ley<br>precio:10E<br>color:grey', 'Titulo:anillo plata ley<br>precio:20E<br>color:azul<br>tamaño:10', 'yuzuk4','yuzuk5','yuzuk6', 'yuzuk7', 'yuzuk8'];
+    var numero = galeria.length;
+    var pos = 0; // posicion de la imagen incial
+    var segundosTimeout = 2000;
+    // cargamos primera foto de galeria
+    if (pos > numero-1) {pos = numero-1;} // si lapos es mayor que el numero de elementos, mostramos la ultima imagen
+    document.getElementById("foto").src = `img/${galeria[pos]}`;
+    document.getElementById("fotoTitulo").innerHTML = galeriaTexto[pos]; 
+    var testigo = '<tr>';
+    
+
+    for (var i=0; i<numero;i++) {
+        if (i==pos) 
+        {
+            testigo += `<td id="c${i}" class="circulo circuloActivo" >${i+1}</td>`;
+        } else {
+            testigo += `<td id="c${i}" class="circulo circuloOculto">${i+1}</td>`;
+        }
+    }
+    testigo += '</tr>';
+    document.getElementById('tablaId').innerHTML=testigo ;
+    
+
+    // listener
+    let btn_diapo = document.getElementById('btn-diapositiva');
+    console.log(btn_diapo);
+    btn_diapo.addEventListener('click',onOf);
+
+    let btn_circulos = document.querySelectorAll('.circulo');
+    console.log(btn_circulos);
+    for(i=0 ; i<btn_circulos.length ; i++){
+        console.log(btn_circulos[i]);
+        btn_circulos[i].addEventListener("click", function () {
+           this.style.backgroundColor='yellow';
+        }, false);  
+    } 
+
+
+    function onOf(){
+        let Boton = document.getElementById('btn-diapositiva');
+        if ( Boton.innerHTML=='EMPEZAR'){
+
+            Boton.innerHTML='ACABAR';
+            Boton.style.backgroundColor='red';
+            diapo = setInterval(cambiar,segundosTimeout);
+        } else{
+            Boton.innerHTML='EMPEZAR'
+            Boton.style.backgroundColor='green';
+            clearInterval(diapo);
+        }
+    }
+    
+    
+    
+ 
+
+    function cambiar(){
+        document.getElementById('foto').src=`img/${galeria[pos]}`; //cambio imagen 
+        document.getElementById("fotoTitulo").innerHTML = galeriaTexto[pos]; 
+        console.log(pos);
+        let circulos = document.querySelectorAll(".circulo");
+        circulos.forEach(circulo => { 
+            circulo.classList.remove('circuloActivo'); 
+            circulo.classList.add('circuloOculto');
+    
+        });
+        circulos[pos].classList.add("circuloActivo");
+        circulos[pos].classList.remove("circuloOculto");
+        pos = (pos +1) % numero;
+       
+    
+    
+    }
+
+  
+
+
+
+    
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>function arama() {
+    let buscar = document.getElementById('palabras').value.toLowerCase();
+    let found = false; // Eşleşme bulunduğunda true olacak bir değişken tanımlayalım
+    
+    switch (true) {
+        case buscar.includes("anillos"):
+            window.location.href = "anillornek.html"; // Yüzükler sayfasına yönlendirme
+            found = true;
+            break;
+        case buscar.includes("pulseras"):
+            window.location.href = "pulserasornek.html"; // Bilezikler sayfasına yönlendirme
+            found = true;
+            break;
+        case buscar.includes("collares"):
+            window.location.href = "collaresornek.html"; // Kolyeler sayfasına yönlendirme
+            found = true;
+            break;
+        case buscar.includes("pendientes"):
+            window.location.href = "ornekpendientes.html"; // Küpeler sayfasına yönlendirme
+            found = true;
+            break;
+    }
+    
+    if (!found) {
+        alert("Aranan ürün bulunamadı!"); // Eşleşme bulunamazsa uyarı göster
+    }
+}
+
+kkkkk
+
+</script>
+</body>
+</html>
